@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+          type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Custom styles for this template -->
+    <link href="css/landing-page.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/fontawesome-free-5.15.3-web/css/all.min.css">
+    <style>
+        #app > main > div.p-4.p-md-5.mb-4.text-white.rounded.bg-dark {
+            background: url("./img/bg-masthead.jpg") no-repeat center center;
+            background-size: cover;
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        /* Carousel base class */
+        .carousel {
+            margin-bottom: 4rem;
+        }
+
+        /* Since positioning the image, we need to help out the caption */
+        .carousel-caption {
+            bottom: 3rem;
+            z-index: 10;
+        }
+
+        /* Declare heights because of positioning of img element */
+        .carousel-item {
+            height: 32rem;
+        }
+
+        .carousel-item > img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            height: 32rem;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <div class="container">
+        <header class="blog-header py-3">
+            <div class="row flex-nowrap justify-content-between align-items-center">
+                <div class="col-12 text-center">
+                    <h3 class="font-weight-light">Business Name or Tagline</h3>
+                </div>
+
+            </div>
+        </header>
+
+        <div class="nav-scroller py-1 mb-2">
+            <nav class="nav d-flex justify-content-between">
+                <a class="p-2 link-secondary" href="#">Home</a>
+                <a class="p-2 link-secondary" href="#">Inventory</a>
+                <a class="p-2 link-secondary" href="#">Services</a>
+                <a class="p-2 link-secondary" href="#">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+            <div class="col-md-6 px-0">
+                <h1 class="display-4">Title</h1>
+                <p class="lead my-3">Multiple lines of text that form the lede.</p>
+                <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-md-6" data-aos="fade-up">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">Quality</strong>
+                        <h3 class="mb-0"> We work hard to provide the highest quality of service!</h3>
+                        <!--<div class="mb-1 text-muted">Nov 12</div>-->
+                        <p class="card-text mb-auto">If you are looking for reliable used car dealerships in Delear
+                            Store.</p>
+                        <a href="#" class="stretched-link"
+                           @click="showSwal('The best quiality','You can trust that whatever make and model you choose has been thoroughly inspected for quality','./img/1.jpeg')">Continue
+                            reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="img/1.jpeg" alt="" width="200" height="250" class="bd-placeholder-img">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Financing</strong>
+                        <h3 class="mb-0">Financing to Fit Your Budget</h3>
+                        <!--<div class="mb-1 text-muted">Nov 11</div>-->
+                        <p class="mb-auto">You can even apply for financing online to get the process started.</p>
+                        <a href="#" class="stretched-link"
+                           @click="showSwal('Financing','Check the value of your trade in, or see your potential monthly payments.','./img/2.jpeg')">Continue
+                            reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="img/2.jpeg" alt="" width="200" height="250" class="bd-placeholder-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="pb-4 mb-4 fst-italic border-bottom">
+                    Inventory
+                </h3>
+
+                <div id="carousel_inventory" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel_inventory" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carousel_inventory" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carousel_inventory" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="card-group">
+                                <div class="card bg-dark">
+                                    <img src="./img/car1.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body text-white">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit
+                                            longer.</p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card bg-dark">
+                                    <img src="./img/car2.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body text-white">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This card has supporting text below as a natural lead-in to
+                                            additional content.</p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card-group">
+                                <div class="card bg-dark">
+                                    <img src="./img/car3.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body text-white">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit
+                                            longer.</p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card bg-dark">
+                                    <img src="./img/car4.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body text-white">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This card has supporting text below as a natural lead-in to
+                                            additional content.</p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card-group">
+                                <div class="card bg-dark">
+                                    <img src="./img/car5.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body text-white">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a wider card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit
+                                            longer.</p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="card bg-dark">
+                                    <img src="./img/car6.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body text-white">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This card has supporting text below as a natural lead-in to
+                                            additional content.</p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel_inventory"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel_inventory"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+
+                </div>
+            </div>
+        </div><!-- /.row -->
+
+        <div class="row">
+
+            <h3 class="pb-4 mb-4 fst-italic border-bottom">
+                Services
+            </h3>
+
+            <div class="feature col-md-4" data-aos="flip-left">
+                <div class="feature-icon text-center">
+                    <i class="fas fa-car fa-10x text-black-50"></i>
+                </div>
+                <h2 class="text-center">Service one</h2>
+                <p class="text-justify">Paragraph of text beneath the heading to explain the heading. We'll add onto it
+                    with another sentence and probably just keep going until we run out of words.</p>
+            </div>
+
+            <div class="feature col-md-4" data-aos="flip-left">
+                <div class="feature-icon text-center">
+                    <i class="fas fa-charging-station fa-10x text-black-50"></i>
+                </div>
+                <h2 class="text-center">Service two</h2>
+                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence
+                    and probably just keep going until we run out of words.</p>
+
+            </div>
+
+            <div class="feature col-md-4" data-aos="flip-left">
+                <div class="feature-icon text-center">
+                    <i class="fas fa-dollar-sign fa-10x text-black-50"></i>
+                </div>
+                <h2 class="text-center">Service three</h2>
+                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence
+                    and probably just keep going until we run out of words.</p>
+            </div>
+
+        </div>
+
+        <footer class="footer">
+            <h3 class="pb-4 mb-4 fst-italic border-bottom">
+                Contact
+            </h3>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3439.9424865589417!2d-86.64084648487558!3d30.437732281740967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88913ef576ecaea1%3A0xed2ddc1fda225f50!2s727%20Beal%20Pkwy%20NW%2C%20Fort%20Walton%20Beach%2C%20FL%2032547!5e0!3m2!1ses-419!2sus!4v1616967297201!5m2!1ses-419!2sus"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+            <hr>
+
+            <div class="row">
+                <!-- Footer Location-->
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Location</h4>
+                    <p class="lead mb-0">
+                        2215 John Daniel Drive
+                        <br>
+                        Clark, MO 65243
+                    </p>
+                </div>
+                <!-- Footer Social Icons-->
+                <div class="col-lg-4 mb-5 mb-lg-0 text-center">
+                    <h4 class="text-uppercase mb-4">Around the Web</h4>
+                    <a target="_blank" class="btn btn-outline-light btn-social mx-1 bg-info" href="https://www.facebook.com/Wichys-Car-112765604241860/">
+                        <i class="fab fa-facebook-f fa-2x"></i>
+                    </a>
+                    <a target="_blank" class="btn btn-outline-light btn-social mx-1 bg-info" href="https://instagram.com/wichyscarfw?igshid=3lficlwmo2p7">
+                        <i class="fab fa-instagram-square fa-2x"></i>
+                    </a>
+                </div>
+                <!-- Footer About Text-->
+                <div class="col-lg-4">
+                    <h4 class="text-uppercase mb-4">About Delear</h4>
+                    <p class="lead mb-0">
+                        <a href="#">Delear Store</a>
+                    </p>
+                </div>
+            </div>
+
+        </footer>
+
+    </main><!-- /.container -->
+</div>
+
+<script src="vendor/fontawesome-free-5.15.3-web/js/all.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/vue.global.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script>
+
+    var myCarousel = document.querySelector('#carousel_inventory')
+    var carousel = new bootstrap.Carousel(myCarousel, {
+        interval: 5000,
+        wrap: false
+    })
+
+    const application = {
+        data() {
+            return {}
+        },
+        components: {},
+        methods: {
+            showSwal(title, message, url) {
+                Swal.fire({
+                    title: title,
+                    text: message,
+                    imageUrl: url,
+                    imageWidth: 400,
+                    imageHeight: 400,
+                })
+            }
+        },
+        mounted() {
+            AOS.init()
+        }
+    }
+
+
+    Vue.createApp(application).mount('#app')
+
+
+</script>
+</body>
+</html>
